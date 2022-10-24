@@ -25,12 +25,20 @@ class TestUtilidades(unittest.TestCase):
     '''
     def test_cifrar(self):
         assert cifrar('hola mundo', 0) == 'HOLA MUNDO'
-        assert cifrar('hola mundo', 20) == 'ÉDAU BJNXD'
-        assert cifrar('adiós, mundo', 20) == 'UXÍSH, BJNXD'
+        r = cifrar('hola mundo', 20)
+        print(r)
+        assert r == 'ÁDÚT AJCWD'
+        r = cifrar('adiós, mundo', 20) 
+        print(r)
+        assert r == 'TWÉRH, AJCWD'
 
     def test_descifrar(self):
-        assert descifrar('UXÍSH, BJNXD', 20) ==  'ADIÓS, MUNDO'
-        assert descifrar('ÉDAU BJNXD', 20) == 'HOLA MUNDO'
+        d = descifrar('TWÉRH, AJCWD', 20)
+        print(d)
+        assert d ==  'ADIÓS, MUNDO'
+        d = descifrar('ÁDÚT AJCWD', 20)
+        print(d)
+        assert d == 'HOLA MUNDO'
     '''
 
     def test_convertir(self):

@@ -339,7 +339,7 @@ def cifrar(texto, desplazamiento):
   '''
   Transforma un texto dado usando cifrado César con un desplazamiento dado.
 
-  Utiliza esta lista de caracteres: ABCDEFGHIJKLMÑOPQRSTUVWXYZÁÉÍÓÚ
+  Utiliza esta lista de caracteres: ABCDEFGHIJKLMÑNOPQRSTUVWXYZÁÉÍÓÚ
   
   Si un caracter no se encuentra en la lista, se deja intacto.
   '''
