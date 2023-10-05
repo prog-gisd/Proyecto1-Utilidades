@@ -286,8 +286,8 @@ def insertar(producto: str) -> None:
   '''Añade un producto a la lista'''
   raise NotImplementedError
 
-def borrar(numero: int) -> str:
-  '''Devuelve el producto en el índice dado de lista de productos.'''
+def borrar(numero: int) -> None:
+  '''Borra el producto en el índice dado de lista de productos.'''
   raise NotImplementedError
 
 def lista_productos() -> list[str]:
