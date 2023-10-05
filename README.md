@@ -116,16 +116,16 @@ Inicialmente el fichero contiene algo parecido a esto:
 ```python
 EURO_BITCOIN_RATE = 44471.78
 
-def sumar_numeros(num1, num2):
+def sumar_numeros(num1: int | float, num2: int | float) -> int | float:
     '''Suma los dos numeros proporcionados.'''
     suma = num1 + num2
     return suma
 
-def euros_a_bitcoins(euros):
+def euros_a_bitcoins(euros: float) -> float:
   '''Convierte una cantidad de euros a bitcoins. 1 bitcoin = 44570.17 €'''
   raise NotImplementedError
 
-def bitcoins_a_euros(usd):
+def bitcoins_a_euros(usd: float) -> float:
   '''Convierte una cantidad de bitcoins a euros. 1 bitcoin = 44570.17 €'''
   raise NotImplementedError
 ```
@@ -140,7 +140,7 @@ Por ejemplo, para una funcionalidad como "elevar un número al cuadrado" podría
 <img src="./img/python.png" align=right width=100px>
 
 ```python
-def al_cuadrado(numero):
+def al_cuadrado(numero: int | float) -> int | float:
   ''' Función que devuelve el resultado de elevar un número dado al cuadrado '''
   raise NotImplementedError
 ```
@@ -152,7 +152,7 @@ Una solución en este caso podría ser la siguiente:
 <img src="./img/python.png" align=right width=100px>
 
 ```python
-def al_cuadrado(numero):
+def al_cuadrado(numero: int | float) -> int | float:
   ''' Función que devuelve el resultado de elevar un número dado al cuadrado '''
   return numero**2
 ```
@@ -170,11 +170,11 @@ Las funciones deben cumplir esta especificación:
 <img src="./img/python.png" align=right width=100px>
 
 ```python
-def euros_a_bitcoins(euros):
+def euros_a_bitcoins(euros: int | float) -> int | float:
   '''Convierte una cantidad de euros a bitcoins. 1 bitcoin = 44570.17 €'''
   raise NotImplementedError
 
-def bitcoins_a_euros(usd):
+def bitcoins_a_euros(usd: int | float) -> int | float:
   '''Convierte una cantidad de bitcoins a euros. 1 bitcoin = 44570.17 €'''
   raise NotImplementedError
 ```
@@ -205,7 +205,7 @@ Con esta información, ha de escribirse la siguiente función:
 <img src="./img/python.png" align=right width=100px>
 
 ```python
-def contar_vocales(texto):
+def contar_vocales(texto: str) -> int:
   '''Devuelve el número de vocales que tiene el texto dado.'''
   raise NotImplementedError
 ```
@@ -235,7 +235,7 @@ La función a desarrollar debe cumplir la siguiente especificación:
 <img src="./img/python.png" align=right width=100px>
 
 ```python
-def es_palindromo(texto):
+def es_palindromo(texto: str) -> int:
   '''Detecta si un texto es palíndromo o no'''
   raise NotImplementedError
 ```
@@ -259,7 +259,7 @@ La función debe cumplir la siguiente especificación:
 <img src="./img/python.png" align=right width=100px>
 
 ```python
-def max_temperaturas(temperaturas, umbral):
+def max_temperaturas(temperaturas: list[float], umbral: float) -> list[float]:
   '''Detecta qué mediciones de temperatura han superado el umbral dado'''
   raise NotImplementedError
 ```
@@ -282,23 +282,23 @@ En esta parte crearemos una versión muy simplificada de una lista de la compra,
 <img src="./img/python.png" align=right width=100px>
 
 ```python
-def insertar(producto):
+def insertar(producto: str) -> None:
   '''Añade un producto a la lista'''
   raise NotImplementedError
 
-def borrar(numero):
+def borrar(numero: int) -> str:
   '''Devuelve el producto en el índice dado de lista de productos.'''
   raise NotImplementedError
 
-def lista_productos():
+def lista_productos() -> list[str]:
   '''Devuelve los producto en formato lista.'''
   raise NotImplementedError
 
-def productos():
+def productos() -> None:
   '''Muestra la lista de productos con sus índices.'''
   raise NotImplementedError
 
-def cantidad():
+def cantidad() -> int:
   '''Devuelve el número de productos.'''
   raise NotImplementedError
 ```
@@ -335,7 +335,7 @@ Por simplicidad, sólo se tendrán en cuenta las letras de la A a la Z, y todo e
 <img src="./img/python.png" align=right width=100px>
 
 ```python
-def cifrar(texto, desplazamiento):
+def cifrar(texto: str, desplazamiento: int) -> str:
   '''
   Transforma un texto dado usando cifrado César con un desplazamiento dado.
 
@@ -345,7 +345,7 @@ def cifrar(texto, desplazamiento):
   '''
   raise NotImplementedError
 
-def descifrar(cifrado, desplazamiento):
+def descifrar(cifrado: str, desplazamiento: int) -> str:
   '''
   Aplicada a un texto cifrado con el mismo desplazamiento,
   devuelve el texto original.
