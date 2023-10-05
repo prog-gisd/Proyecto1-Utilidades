@@ -28,7 +28,7 @@
 
 ## Requisitos previos
 
-Disponer de una versión de Python igual o superior a 3.8, y del entorno de desarrollo Visual Studio Code.
+Disponer de una versión de Python igual o superior a 3.10, y del entorno de desarrollo Visual Studio Code.
 
 ## Convenciones
 
