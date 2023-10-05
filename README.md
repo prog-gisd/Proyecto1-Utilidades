@@ -161,6 +161,10 @@ Tras implementar todas las funcionalidades del proyecto, la última tarea será 
 
 ## Actividades de la práctica
 
+### 0. Anotación
+
+Todas las funciones y variables deben anotarse (typing) correctamente.
+
 ### 1. Conversor de criptomonedas
 
 La primera tarea es muy sencilla: escribir una función que permita convertir de euros a bitcoins, y otra que haga el proceso inverso.
