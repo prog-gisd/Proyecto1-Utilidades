@@ -239,7 +239,7 @@ La función a desarrollar debe cumplir la siguiente especificación:
 <img src="./img/python.png" align=right width=100px>
 
 ```python
-def es_palindromo(texto: str) -> int:
+def es_palindromo(texto: str) -> bool:
   '''Detecta si un texto es palíndromo o no'''
   raise NotImplementedError
 ```
