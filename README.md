@@ -2,18 +2,18 @@
 
 <br/><br/>
 
-# Práctica 1 - Utilidades
+# P1 - Utilidades
 
 
 ## Contenido
 
-- [Práctica 1 - Utilidades](#práctica-1---utilidades)
+- [Proyecto 1 - Utilidades](#proyecto-1---utilidades)
   - [Contenido](#contenido)
   - [Requisitos previos](#requisitos-previos)
   - [Convenciones](#convenciones)
   - [Objetivos](#objetivos)
   - [Introducción](#introducción)
-  - [Actividades de la práctica](#actividades-de-la-práctica)
+  - [Actividades](#actividades)
     - [1. Conversor de criptomonedas](#1-conversor-de-criptomonedas)
     - [2. Contador de vocales](#2-contador-de-vocales)
     - [3. Detector de palíndromos](#3-detector-de-palíndromos)
@@ -21,7 +21,7 @@
     - [5. Lista de la compra](#5-lista-de-la-compra)
     - [6. Cifrado de texto (opcional)](#6-cifrado-de-texto-opcional)
     - [7. Menú de selección](#7-menú-de-selección)
-  - [Entrega de la práctica](#entrega-de-la-práctica)
+  - [Entrega](#entrega)
   - [Anexos](#anexos)
     - [Evaluación](#evaluación)
   - [Enlaces](#enlaces)
@@ -32,15 +32,15 @@ Disponer de una versión de Python igual o superior a 3.10, y del entorno de des
 
 ## Convenciones
 
-Durante la práctica se utilizarán tres tipos de código. Por un lado, código a escribir en la línea de comandos
-(_command line_), también conocida como terminal o consola. En el ejemplo de abajo, vemos cómo ejecutamos
-el comando `python --version`, que imprime por pantalla la versión de Python en el sistema.
+Durante este proyecto se utilizarán tres tipos de código.
+Por un lado, código a escribir en la línea de comandos (_command line_), también conocida como terminal o consola.
+En el ejemplo de abajo, vemos cómo ejecutamos el comando `python --version`, que imprime por pantalla la versión de Python en el sistema.
 
 <img src="./img/shell.png" align=right width=100px>
 
 ```shell
 $ python --version
-Python 3.8.10
+Python 3.10.12
 ```
 
 Por otro lado, hay fragmentos de sesión del intérprete de comandos de python.
@@ -50,8 +50,7 @@ Podemos acceder al intérprete directamente ejecutando el comando Python en nues
 
 ```shell
 $ python
-Python 3.8.10 (default, Jun  2 2021, 10:49:15) 
-[GCC 9.4.0] on linux
+Python 3.10.12 (main, Jun 11 2023, 05:26:28) [GCC 11.4.0] on linux
 Type "help", "copyright", "credits" or "license" for more information.
 >>> 
 ```
@@ -97,7 +96,7 @@ _**Nota**: todas las líneas ejecutadas durante una sesión de python o de conso
 
 ## Introducción
 
-En esta práctica exploraremos conceptos básicos en python mientras implementamos varias funcionalidades que nos pueden ser útiles en el día a día:
+En este proyecto exploraremos conceptos básicos en python mientras implementamos varias funcionalidades que nos pueden ser útiles en el día a día:
 
 -   Conversor de criptomonedas
 -   Contador de vocales
@@ -106,7 +105,9 @@ En esta práctica exploraremos conceptos básicos en python mientras implementam
 -   Cifrado de mensajes de texto
 -   Lista de la compra
 
-El primer paso para desarrollar la práctica es descargar los ficheros necesarios del repositorio de Github. El método más sencillo es a través del botón `Code->Download ZIP`. Los dos ficheros necesarios para la práctica son `utilidades.py` y `test.py` (ver sección [Evaluación](#evaluación)).
+El primer paso es descargar los ficheros necesarios del repositorio de Github.
+El método más sencillo es a través del botón `Code->Download ZIP`.
+Los dos ficheros necesarios son `utilidades.py` y `test.py` (ver sección [Evaluación](#evaluación)).
 
 Todas las funciones que se piden deben añadirse al fichero con nombre `utilidades.py`, y deberá entregarse en la tarea de Moodle del `Proyecto 1 - Utilidades`. 
 Inicialmente el fichero contiene algo parecido a esto:
@@ -130,9 +131,12 @@ def bitcoins_a_euros(usd: float) -> float:
   raise NotImplementedError
 ```
 
-Por un lado, define el ratio de conversión de euro a bitcoins. Además, contiene la función de prueba ```sumar_numeros```, que toma como parámetros dos números y devuelve la suma. Por último, contiene el esqueleto de dos de las funciones a desarrollar en esta práctica.
+Por un lado, define el ratio de conversión de euro a bitcoins.
+Además, contiene la función de prueba ```sumar_numeros```, que toma como parámetros dos números y devuelve la suma.
+Por último, contiene el esqueleto de dos de las funciones a desarrollar.
 
-Para su edición, se puede usar cualquier IDE, aunque se recomienda Visual Studio Code. El fichero ```test.py``` se puede usar opcionalmente para comprobar que las funciones desarrolladas en la práctica funcionan correctamente, como se explicará más adelante.
+Para su edición, se puede usar cualquier IDE, aunque se recomienda Visual Studio Code.
+El fichero `test.py` se puede usar opcionalmente para comprobar que las funciones desarrolladas funcionan correctamente, como se explicará más adelante.
 
 Para cada una de estas funcionalidades se proporcionará la firma (esqueleto) de la función a cumplir.
 Por ejemplo, para una funcionalidad como "elevar un número al cuadrado" podría proporcionarse el siguiente código:
@@ -159,7 +163,7 @@ def al_cuadrado(numero: int | float) -> int | float:
 
 Tras implementar todas las funcionalidades del proyecto, la última tarea será desarrollar un programa con un menú interactivo que permitirá a los usuarios utilizar las funciones que hemos desarrollado.
 
-## Actividades de la práctica
+## Actividades
 
 ### 0. Anotación
 
@@ -195,7 +199,9 @@ Un ejemplo de uso sería el siguiente (asumiendo que el intérprete se lanza en 
 89140.34
 ```
 
-_**Nota**: El valor de las criptomonedas fluctúa enormemente. Por simplicidad en la corrección, tome como valor de conversión 1 bitcoin = 44570.17 € (aunque no sea el valor real en el momento en el que realice la práctica). El resultado se redondea a 2 decimales. Véase la función ```round```<sup>[2](#round)</sup>._
+_**Nota**: El valor de las criptomonedas fluctúa enormemente.
+Por simplicidad en la corrección, tome como valor de conversión 1 bitcoin = 44570.17 € (aunque no sea el valor real en este momento).
+El resultado se redondea a 2 decimales. Véase la función ```round```<sup>[2](#round)</sup>._
 
 _**Nota**: Si cambiamos el fichero `utilidades.py` después de haber importado el fichero, deberemos reiniciar nuestro intérprete (opción fácil), o recargar el módulo usando un código como el siguiente: `import importlib;importlib.reload(utilidades)` (opción cómoda pero avanzada)._
 
@@ -449,11 +455,12 @@ Por ejemplo:
 18
 ```
 
-_**Nota**: En esta práctica no hace falta tener en cuenta errores por parte del usuario (p.e., introducir letras en lugar de números en la conversión), aunque se sugiere como ejercicio opcional. Si no se ha realizado el ejercicio opcional del cifrado de texto, no hace falta incluirlo en el menú._
+_**Nota**: Por ahora, no hace falta tener en cuenta errores por parte del usuario (p.e., introducir letras en lugar de números en la conversión), aunque se sugiere como ejercicio opcional.
+Si no se ha realizado el ejercicio opcional del cifrado de texto, no hace falta incluirlo en el menú._
 
-## Entrega de la práctica
+## Entrega
 
-Para entregar la práctica, se deberá subir a Moodle en <a href="https://moodle.upm.es/titulaciones/oficiales/mod/assign/view.php?id=208687">este enlace</a> el fichero ```utilidades.py```, conteniendo todas las funciones requeridas en la práctica.
+Se deberá subir a Moodle en <a href="https://moodle.upm.es/titulaciones/oficiales/mod/assign/view.php?id=208687">este enlace</a> el fichero `utilidades.py`, conteniendo todas las funciones requeridas en el enunciado.
 La entrega deberá hacerse antes de la fecha especificada en la tarea de Moodle.
 
 </br>
@@ -493,7 +500,7 @@ ERROR: test_convertir (__main__.TestUtilidades)
 Traceback (most recent call last):
   File "test.py", line 37, in test_convertir
     assert (bitcoins_a_euros(2) - 89140.34) < 1
-  File "/home/j/Clases/PROG/2021/p1-utilidades/utilidades.py", line 7, in bitcoins_a_euros
+  File "p1-utilidades/utilidades.py", line 7, in bitcoins_a_euros
     raise NotImplementedError
 NotImplementedError
 ----------------------------------------------------------------------
@@ -540,6 +547,6 @@ __**Nota**:_ las pruebas del ejercicio opcional están comentadas para evitar er
 <a name="print">1</a>: https://docs.python.org/es/3/tutorial/inputoutput.html </br>
 <a name="round">2</a>: https://www.w3schools.com/python/ref_func_round.asp </br>
 <a name="lower">3</a>: https://www.w3schools.com/python/ref_string_lower.asp </br>
-<a name="replace">4</a>: https://docs.python.org/3.8/library/stdtypes.html\#str.replace </br>
+<a name="replace">4</a>: https://docs.python.org/3.10/library/stdtypes.html\#str.replace </br>
 <a name="cesar">5</a>: https://es.wikipedia.org/wiki/Cifrado_Cesar </br>
 <a name="input">6</a>: https://www.w3schools.com/python/ref_func_input.asp </br>
