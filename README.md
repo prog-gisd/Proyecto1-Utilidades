@@ -292,6 +292,8 @@ En esta parte crearemos una versión muy simplificada de una lista de la compra,
 <img src="./img/python.png" align=right width=100px>
 
 ```python
+productos: list[str] = []
+
 def insertar(producto: str) -> None:
   '''Añade un producto a la lista'''
   raise NotImplementedError
@@ -300,11 +302,7 @@ def borrar(numero: int) -> None:
   '''Borra el producto en el índice dado de lista de productos.'''
   raise NotImplementedError
 
-def lista_productos() -> list[str]:
-  '''Devuelve los producto en formato lista.'''
-  raise NotImplementedError
-
-def productos() -> None:
+def mostrar_productos() -> None:
   '''Muestra la lista de productos con sus índices.'''
   raise NotImplementedError
 
@@ -318,19 +316,19 @@ Este es un ejemplo de uso:
 <img src="./img/python-repl-vertical.png" align=right width=100px>
 
 ```pycon
->>> lista_productos()
+>>> productos
 []
->>> productos()
+>>> mostrar_productos()
 No hay productos
 >>> insertar('Arroz integral')
 >>> insertar('Berenjenas')
->>> productos()
+>>> mostrar_productos()
 0: Arroz integral
 1: Berenjenas
 >>> cantidad()
 2
 >>> borrar(0)
->>> productos()
+>>> mostrar_productos()
 0: Berenjenas
 >>> cantidad()
 0
@@ -349,7 +347,7 @@ def cifrar(texto: str, desplazamiento: int) -> str:
   '''
   Transforma un texto dado usando cifrado César con un desplazamiento dado.
 
-  Utiliza esta lista de caracteres: ABCDEFGHIJKLMÑNOPQRSTUVWXYZÁÉÍÓÚ
+  Utiliza esta lista de caracteres: ABCDEFGHIJKLMNÑOPQRSTUVWXYZÁÉÍÓÚ
   
   Si un caracter no se encuentra en la lista, se deja intacto.
   '''
@@ -373,11 +371,11 @@ Este es un ejemplo del uso de las funciones:
 >>> descifrar('HOLA MUNDO', 0)
 'HOLA MUNDO'
 >>> cifrar('hola mundo', 20)
-'ÉDAU BJNXD'
->>> descifrar('ÉDAU BJNXD', 20)
+'ÁDÚT AJBWD'
+>>> descifrar('ÁDÚT AJBWD', 20)
 'HOLA MUNDO'
 >>> cifrar('adiós, mundo!', 20)
-'UXÍSH, BJNXD!'
+'TWÉRH, AJBWD!'
 >>> descifrar(_, 20)
 'ADIÓS, MUNDO!'
 ```
@@ -397,7 +395,7 @@ Sin embargo, nuestro menú sólo contará con las siguientes opciones, donde las
 -   ```convertir bitcoins euros <cantidad>```
 -   ```contar <texto>```
 -   ```palindromo <texto>```
--   ```temperaturas <lista separada por comas> <umbral>```
+-   ```temperaturas <varios números separados por comas> <umbral>```
 -   ```cifrar <texto> <desplazamiento>``` (sólo si se implementa el apartado 6)
 -   ```descifrar <texto> <desplazamiento>``` (sólo si se implementa el apartado 6)
 -   ```productos```
@@ -423,7 +421,7 @@ Menú interactivo
 OÍÓK ÓKÉOK OÍ WÚD PFMSV
 -> descifrar 15 'CÓI EN ÚBÓVBPÉPSÓB'
 SOY UN PROGRAMADOR
--> temperaturas 10.0 20.0 5
+-> temperaturas 10.0,20.0 5
 [20.0]
 -> productos
 No hay productos
@@ -480,11 +478,11 @@ Si todo está bien implementado, debería obtenerse un resultado parecido a este
 
 ```shell
  $ python test.py
-.....
+.s..s..
 ----------------------------------------------------------------------
-Ran 8 tests in 0.000s
+Ran 10 tests in 0.000s
 
-OK
+OK (skipped=2)
 ```
 
 
@@ -504,9 +502,9 @@ Traceback (most recent call last):
     raise NotImplementedError
 NotImplementedError
 ----------------------------------------------------------------------
-Ran 9 tests in 0.000s
+Ran 10 tests in 0.000s
 
-FAILED (errors=1)
+FAILED (errors=1, skipped=2)
 ```
 
 

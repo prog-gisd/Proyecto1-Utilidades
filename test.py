@@ -22,24 +22,22 @@ def red(fun, *args, **kwargs):
 
 class TestUtilidades(unittest.TestCase):
 
-    '''
+    @unittest.skipIf('cifrar' not in globals(),
+                     "el método cifrar no está implementado")
     def test_cifrar(self):
-        assert cifrar('hola mundo', 0) == 'HOLA MUNDO'
+        self.assertEqual(cifrar('hola mundo', 0), 'HOLA MUNDO')
         r = cifrar('hola mundo', 20)
-        print(r)
-        assert r == 'ÁDÚT AJCWD'
+        self.assertEqual(r, 'ÁDÚT AJBWD')
         r = cifrar('adiós, mundo', 20) 
-        print(r)
-        assert r == 'TWÉRH, AJCWD'
+        self.assertEqual(r, 'TWÉRH, AJBWD')
 
+    @unittest.skipIf('descifrar' not in globals(),
+                     "el método descifrar no está implementado")
     def test_descifrar(self):
-        d = descifrar('TWÉRH, AJCWD', 20)
-        print(d)
-        assert d ==  'ADIÓS, MUNDO'
-        d = descifrar('ÁDÚT AJCWD', 20)
-        print(d)
-        assert d == 'HOLA MUNDO'
-    '''
+        d = descifrar('TWÉRH, AJBWD', 20)
+        self.assertEqual(d, 'ADIÓS, MUNDO')
+        d = descifrar('ÁDÚT AJBWD', 20)
+        self.assertEqual(d, 'HOLA MUNDO')
 
     def test_convertir(self):
         assert (euros_a_bitcoins(10000) - 0.22) < 0.1
@@ -58,34 +56,34 @@ class TestUtilidades(unittest.TestCase):
         assert max_temperaturas([12.0, 3.0, 4.0, 17.0, 26.0], 32) == []
 
     def test_productos_vacios(self):
-        lista_productos().clear()
-        v = red(productos)
+        productos.clear()
+        v = red(mostrar_productos)
         assert 'No hay productos' in v
-        assert len(lista_productos()) == 0
+        assert len(productos) == 0
 
     def test_insertar(self):
         insertar('prueba')
         insertar('final')
-        assert len(lista_productos()) == 2
-        assert lista_productos()[0] == 'prueba'
-        assert lista_productos()[1] == 'final'
+        assert len(productos) == 2
+        assert productos[0] == 'prueba'
+        assert productos[1] == 'final'
 
     def test_borrar(self):
-        lista_productos().clear()
+        productos.clear()
         insertar('prueba')
         insertar('final')
         borrar(1)
-        assert len(lista_productos()) == 1
+        assert len(productos) == 1
         borrar(0)
-        assert len(lista_productos()) == 0
+        assert len(productos) == 0
 
     def test_mostrar_productos(self):
-        lista_productos().clear()
-        v = red(productos)
+        productos.clear()
+        v = red(mostrar_productos)
         assert 'No hay productos' in v
         assert ':' not in v
         insertar('prueba')
-        v = red(productos)
+        v = red(mostrar_productos)
         assert 'prueba' in v
 
 if __name__ == '__main__':
