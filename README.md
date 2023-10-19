@@ -200,7 +200,7 @@ Un ejemplo de uso sería el siguiente (asumiendo que el intérprete se lanza en 
 ```
 
 _**Nota**: El valor de las criptomonedas fluctúa enormemente.
-Por simplicidad en la corrección, tome como valor de conversión 1 bitcoin = 44570.17 € (aunque no sea el valor real en este momento).
+Por simplicidad en la corrección, tome como valor de conversión 1 bitcoin = 44471.78 € (aunque no sea el valor real en este momento).
 El resultado se redondea a 2 decimales. Véase la función ```round```<sup>[2](#round)</sup>._
 
 _**Nota**: Si cambiamos el fichero `utilidades.py` después de haber importado el fichero, deberemos reiniciar nuestro intérprete (opción fácil), o recargar el módulo usando un código como el siguiente: `import importlib;importlib.reload(utilidades)` (opción cómoda pero avanzada)._

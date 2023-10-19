@@ -43,7 +43,7 @@ class TestUtilidades(unittest.TestCase):
 
     def test_convertir(self):
         assert (euros_a_bitcoins(10000) - 0.22) < 0.1
-        assert (bitcoins_a_euros(2) - 89140.34) < 1
+        assert (bitcoins_a_euros(2) - EURO_BITCOIN_RATE * 2) < 1
 
     def test_contar(self):
         assert contar_vocales('esto son ocho vocales') == 8
