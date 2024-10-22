@@ -331,7 +331,7 @@ No hay productos
 >>> mostrar_productos()
 0: Berenjenas
 >>> cantidad()
-0
+1
 ```
 
 ### 6. Cifrado de texto (opcional)
