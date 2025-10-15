@@ -43,7 +43,7 @@ $ python --version
 Python 3.10.12
 ```
 
-Por otro lado, hay fragmentos de sesión del intérprete de comandos de python.
+Por otro lado, hay fragmentos de sesión del intérprete de comandos de Python.
 Podemos acceder al intérprete directamente ejecutando el comando Python en nuestra terminal:
 
 <img src="./img/shell.png" align=right width=100px>
@@ -83,7 +83,7 @@ def funcion(parametro):
 También utilizaremos notas para resaltar consejos o aspectos importantes:
 
 ***
-_**Nota**: todas las líneas ejecutadas durante una sesión de python o de consola se guardan en el historial. Se puede acceder a una línea anterior mediante las flechas del teclado o pulsando `Ctrl+P` repetidamente hasta llegar a la línea deseada._
+_**Nota**: todas las líneas ejecutadas durante una sesión de Python o de consola se guardan en el historial. Se puede acceder a una línea anterior mediante las flechas del teclado o pulsando `Ctrl+P` repetidamente hasta llegar a la línea deseada._
 ***
 
 ## Objetivos
@@ -96,12 +96,12 @@ _**Nota**: todas las líneas ejecutadas durante una sesión de python o de conso
 
 ## Introducción
 
-En este proyecto exploraremos conceptos básicos en python mientras implementamos varias funcionalidades que nos pueden ser útiles en el día a día:
+En este proyecto exploraremos conceptos básicos en Python mientras implementamos varias funcionalidades que nos pueden ser útiles en el día a día:
 
 -   Conversor de criptomonedas
 -   Contador de vocales
 -   Detector de palíndromos
--   Detector de máximos de temperatura
+-   Detector de máximos de temperaturas
 -   Cifrado de mensajes de texto
 -   Lista de la compra
 
@@ -525,7 +525,7 @@ Ran 1 test in 0.000s
 OK
 ```
 
-__**Nota**:_ las pruebas del ejercicio opcional están comentadas para evitar errores en aquellos que no lo realicen. Quien haya realizado el ejercicio y quiera comprobarlo, puedo hacerlo descomentando los siguientes métodos en el fichero `test.py`:
+__**Nota**:_ las pruebas del ejercicio opcional están comentadas para evitar errores en aquellos que no lo realicen. Quien haya realizado el ejercicio y quiera comprobarlo, puede hacerlo descomentando los siguientes métodos en el fichero `test.py`:
 
 <img src="./img/python.png" align=right width=100px>
 
