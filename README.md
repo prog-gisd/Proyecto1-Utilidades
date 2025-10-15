@@ -458,8 +458,7 @@ Si no se ha realizado el ejercicio opcional del cifrado de texto, no hace falta 
 
 ## Entrega
 
-Se deberá subir a Moodle en <a href="https://moodle.upm.es/titulaciones/oficiales/mod/assign/view.php?id=208687">este enlace</a> el fichero `utilidades.py`, conteniendo todas las funciones requeridas en el enunciado.
-La entrega deberá hacerse antes de la fecha especificada en la tarea de Moodle.
+Para la entrega final, solamente se deberá subir un único fichero comprimido en formato ZIP que contenga una carpeta por cada proyecto presentado. Cada carpeta debe incluir los ficheros correspondientes a ese proyecto. Es posible copiar o replicar cualquier fichero en las diferentes carpetas si se considera necesario para facilitar la organización. Esta entrega global se hará al finalizar todos los proyectos, siguiendo las indicaciones y fechas establecidas en Moodle.
 
 </br>
 </br>
